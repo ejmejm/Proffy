@@ -136,3 +136,30 @@ h6 {
 .form-horizontal select {
   height: 30px;
 }
+/*
+	User Settings
+*/
+#userSettings {
+  text-align: center;
+}
+.infoText {
+  background: rgba(0,0,0,0.1);
+  border: none;
+}
+/*
+	First Time Login
+*/
+.category-text {
+  color: #f0f;
+}
+.category-desc {
+  font-size: 12px;
+  margin: 5px auto;
+  display: block;
+  width: 100px;
+}
+.btn-nxt {
+  margin: 5px auto;
+  display: block;
+  width: 100px;
+}

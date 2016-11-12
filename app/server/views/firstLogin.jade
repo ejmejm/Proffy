@@ -1,0 +1,60 @@
+
+extends layout
+
+block content
+
+	#login.center-vertical
+		form.well(id='enterInfo', method='post')
+			h2 Hello!
+			h6 Please Enter Your Information
+
+			//Courses
+
+			div.courses-block
+				h4.category-text Courses
+				span.category-desc Enter relevant courses for the types of research jobs you'll apply for.
+				.form-group
+					input.form-control(type='text', class='course-text', name='course1', placeholder='Course 1')
+				.form-group
+					input.form-control(type='text', class='course-text', name='course2', placeholder='Course 2')
+
+			//Experience
+
+			div.experience-block
+				h4.category-text Experience
+				span.category-desc List any relevant work experience.
+				.form-group
+					input.form-control(type='text', id='user-tf', name='user')
+				.form-group
+					input.form-control(type='password', id='pass-tf', name='pass')
+
+			//Interests
+
+			div.interests-block
+				h4.category-text Interests
+				span.category-desc Enter relevant courses for the types of research jobs you'll apply for.
+				.form-group
+					input.form-control(type='text', class='course-text', name='course1', placeholder='Interest 1')
+				.form-group
+					input.form-control(type='text', class='course-text', name='course2', placeholder='Interest 2')
+
+			//Next
+
+			input(type='button', value='Next').btn.btn-primary.btn-nxt
+
+			//Submit
+
+			.controls
+				button(type='submit').btn.btn-primary.button-sign-in
+					span.glyphicon.glyphicon-lock
+					| Sign In
+			.clearfix
+
+	include modals/alert
+	include modals/lost-password
+
+block scripts
+	script(src='/vendor/jquery-2.2.3.min.js')
+	script(src='/vendor/jquery.form.min.js')
+	script(src='/vendor/bootstrap.min.js')
+	script(src='/js/controllers/infoEnterController.js')
