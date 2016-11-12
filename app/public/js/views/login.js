@@ -22,13 +22,13 @@ $(document).ready(function(){
 		error : function(e){
 			lv.showLoginError('Login Failure', 'Please check your username and/or password');
 		}
-	}); 
+	});
 	$('#user-tf').focus();
-	
+
 // login retrieval form via email //
-	
+
 	var ev = new EmailValidator();
-	
+
 	$('#get-credentials-form').ajaxForm({
 		url: '/lost-password',
 		beforeSubmit : function(formData, jqForm, options){
@@ -55,5 +55,5 @@ $(document).ready(function(){
 			}
 		}
 	});
-	
+
 });

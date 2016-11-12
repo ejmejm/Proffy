@@ -154,12 +154,24 @@ h6 {
 }
 .category-desc {
   font-size: 12px;
-  margin: 5px auto;
-  display: block;
-  width: 100px;
 }
 .btn-nxt {
   margin: 5px auto;
   display: block;
   width: 100px;
+}
+#pg1 {
+  display: block;
+}
+#pg2 {
+  display: none;
+}
+#pg3 {
+  display: none;
+}
+#info-submit-button {
+  margin: 5px auto;
+  width: 100px;
+  height: 50px;
+  display: none;
 }

@@ -10,7 +10,7 @@ block content
 
 			//Courses
 
-			div.courses-block
+			div#pg1
 				h4.category-text Courses
 				span.category-desc Enter relevant courses for the types of research jobs you'll apply for.
 				.form-group
@@ -20,7 +20,7 @@ block content
 
 			//Experience
 
-			div.experience-block
+			div#pg2
 				h4.category-text Experience
 				span.category-desc List any relevant work experience.
 				.form-group
@@ -30,7 +30,7 @@ block content
 
 			//Interests
 
-			div.interests-block
+			div#pg3
 				h4.category-text Interests
 				span.category-desc Enter relevant courses for the types of research jobs you'll apply for.
 				.form-group
@@ -40,14 +40,13 @@ block content
 
 			//Next
 
-			input(type='button', value='Next').btn.btn-primary.btn-nxt
+			input(type='button', value='Next').btn.btn-primary.btn-nxt#next-button
 
 			//Submit
 
-			.controls
+			.controls#info-submit-button
 				button(type='submit').btn.btn-primary.button-sign-in
-					span.glyphicon.glyphicon-lock
-					| Sign In
+					Finish
 			.clearfix
 
 	include modals/alert
@@ -57,4 +56,5 @@ block scripts
 	script(src='/vendor/jquery-2.2.3.min.js')
 	script(src='/vendor/jquery.form.min.js')
 	script(src='/vendor/bootstrap.min.js')
+	script(src='/js/views/enterInfo.js')
 	script(src='/js/controllers/infoEnterController.js')
