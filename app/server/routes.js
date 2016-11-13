@@ -19,6 +19,41 @@ var professors = [
 		major: 'Physics',
 		spec: 'Molecular Biophysics',
 		desc: 'My lab studies emergent physical phenomena that arise from interactions between elementary constituents. The systes we study include suspensions of microscopic particles, the macromolecules in.'
+	},{
+		name: 'Manan Chugh',
+		major: 'Comp Sci',
+		spec: 'Game Design',
+		desc: 'I am a mathematical logician by training. My original work was in computable model theory. From this work I moved onto the design of high-level languages for databases and information systems.'
+	},{
+		name: 'Snoop Dog',
+		major: 'Math',
+		spec: 'Mathematical Biology',
+		desc: 'My research interests include general relativity, relativistic astrophysics, cosmology, and quantum fields in curved spacetime. Currently, one focus of my group\'s research is understanding various sources of.'
+	},{
+		name: 'Anthony Trello',
+		major: 'Physics',
+		spec: 'Molecular Biophysics',
+		desc: 'My lab studies emergent physical phenomena that arise from interactions between elementary constituents. The systes we study include suspensions of microscopic particles, the macromolecules in.'
+	},{
+		name: 'Krunt Jordan',
+		major: 'History',
+		spec: 'Anthropology',
+		desc: 'I have a focus on colonialism, cultural entanglement, and indigenous autonomy. My research centers on the archaeology of Iroquois (Haudenosaunee) peoples, emphasizing the settlement patterns, housing, and political economy of seventeenth- and eighteenth- century Senecas.'
+	},{
+		name: 'Daniel Brash',
+		major: 'Biology',
+		spec: 'Molecular Biology',
+		desc: 'We are interested in how animals develop, evolve and form new species. We use a variety of techniques including genetics, developmental biology and molecular evolution.'
+	},{
+		name: 'Donald Greenberg',
+		major: 'Comp Sci',
+		spec: 'Computer Graphics',
+		desc: 'My research is primarily concerned with advancing the state-of-the-art technologies in computer graphics and utilizing these techniques as they may be applied to a variety of disciplines. My current computer science research projects involve realistic image generation, parallel processing algorithms for rendering, new graphical user interfaces, and computer animation.'
+	},{
+		name: 'Kyle Shen',
+		major: 'Physics',
+		spec: 'Quantum Physics',
+		desc: 'Our research focuses on studying how strong quantum correlations between electrons can give rise to phenomena, such as high-temperature superconductivity, colossal magnetoresistance, or electron fractionalization.'
 	}
 ];
 
