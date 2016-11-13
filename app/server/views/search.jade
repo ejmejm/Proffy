@@ -8,7 +8,7 @@ block content
 		br
 		form(method='get', action='/search', style='display: inline-block')#search-form
 			input(name='query', type='text', placeholder='Search')#search-bar
-			button(type='submit')#search-button
+			button(type='submit')#search-button Search
 
 		div#matches-box
 			h5 Matches
@@ -25,6 +25,7 @@ block content
 								h4 Specializes in #{prof.spec}
 							div.prof-desc
 								h5= prof.desc
+
 
 	include modals/alert
 	include modals/lost-password

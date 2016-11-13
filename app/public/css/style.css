@@ -180,3 +180,41 @@ h6 {
   margin-left: auto;
   margin-right: auto;
 }
+/*
+	Search
+*/
+#search-page {
+  position: relative;
+  margin: 5px auto;
+}
+.prof-block {
+  padding-top: 10px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  border-radius: 2px;
+  box-shadow: 0 0 0.5px 0 rgba(0,0,0,0.24);
+  background-color: #fff;
+}
+.prof-name {
+  float: left;
+  font-weight: bold;
+  padding-left: 20px;
+  font-size: 16px;
+}
+.prof-major {
+  text-align: right;
+  padding-right: 20px;
+  width: 100.5px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #8beda7;
+  box-shadow: 0 0 0.5px 0 rgba(0,0,0,0.24);
+}
+.prof-spec {
+  color: #c8c8c8;
+  padding-left: 20px;
+}
+.prof-header {
+  width: 100%;
+}
