@@ -191,6 +191,7 @@ h6 {
 }
 #search-bar {
   padding-left: 10px;
+  margin-bottom: -10px;
   text-size: 16;
   border: none;
   border-radius: 2px;
@@ -201,16 +202,24 @@ h6 {
 #search-button {
   position: absolute;
   margin-right: 0px;
+  display: none;
 }
 .title {
-  text-align: center;
+  text-align: left;
+  font-weight: 700;
+  margin: 0 auto;
+  width: 450px;
+  padding-top: 10%;
+  padding-left: 3px;
+  padding-right: 0px;
+  padding-bottom: 3px;
 }
 .prof-block {
   margin: 0 auto;
   width: 450px;
-  padding-top: 10px;
+  padding-top: 0px;
   padding-left: 3px;
-  padding-right: 3px;
+  padding-right: 0px;
   padding-bottom: 3px;
   border-radius: 2px;
   box-shadow: 0 0 0.5px 0 rgba(0,0,0,0.24);
@@ -219,22 +228,39 @@ h6 {
 .prof-name {
   float: left;
   font-weight: bold;
+  padding-top: 10px;
   padding-left: 20px;
   font-size: 16px;
 }
 .prof-major {
-  text-align: right;
-  padding-right: 20px;
-  width: 100.5px;
-  height: 30px;
+  float: right;
+  width: 100px;
+  height: 35px;
+  font-weight: bold;
+  padding-top: 7px;
   border-radius: 2px;
   background-color: #8beda7;
+  text-align: center;
   box-shadow: 0 0 0.5px 0 rgba(0,0,0,0.24);
+}
+.prof-text {
+  text-align: center;
 }
 .prof-spec {
   color: #c8c8c8;
+  text-align: left;
   padding-left: 20px;
 }
 .prof-header {
   width: 100%;
+}
+#matches-box {
+  text-align: left;
+  margin: 0 auto;
+  width: 450px;
+  padding-top: 0px;
+  padding-left: 3px;
+  padding-right: 0px;
+  padding-bottom: 3px;
+  text-size: 16px;
 }

@@ -8,7 +8,7 @@ var professors = [
 		name: 'Walker White',
 		major: 'Comp Sci',
 		spec: 'Game Design',
-		desc: 'I am a mathematical logician by training. My original work was in computable model theory. From this work I moved onto the design of high-level languages for databases and information systems.'
+		desc: 'I am a mathematical logician by training. My original work was in computable model theory. From this work I moved onto the design of high-level languages for databases and information systems in computer science.'
 	},{
 		name: 'John Mayes',
 		major: 'Math',
@@ -230,10 +230,23 @@ app.get('/settings', function(req, res) {
 	// if user is not logged-in redirect back to login page //
 			res.redirect('/');
 		}else{
-			console.log(professors);
+			var queryKeys = req.query.query.split(' ');
+			var pushProfs = [];
+			for (var i = 0; i < professors.length; i++){
+				for (var property in professors[i]){
+					var words = (professors[i])[property].split(' ');
+					for (var j = 0; j < words.length; j++){
+						for (var k = 0; k < queryKeys.length; k++){
+							if(words[j].toUpperCase() == queryKeys[k].toUpperCase() && pushProfs.indexOf(professors[i]) == -1){
+								pushProfs.push(professors[i]);
+							}
+						}
+					}
+				}
+			}
 			res.render('search', {
 				title: 'Proffy',
-				profs: professors
+				profs: pushProfs
 			});
 		}
 	});
