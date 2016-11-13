@@ -33,6 +33,7 @@ db.open(function(e, d){
 });
 
 var accounts = db.collection('accounts');
+var professors = db.collection('professors');
 
 /* login validation methods */
 
@@ -91,23 +92,19 @@ exports.addNewAccount = function(newData, callback)
 exports.updateAccount = function(newData, callback)
 {
 	accounts.findOne({_id:getObjectId(newData.id)}, function(e, o){
-		o.name 		= newData.name;
-		o.email 	= newData.email;
-		o.country 	= newData.country;
-		if (newData.pass == ''){
-			accounts.save(o, {safe: true}, function(e) {
-				if (e) callback(e);
-				else callback(null, o);
-			});
-		}	else{
-			saltAndHash(newData.pass, function(hash){
-				o.pass = hash;
-				accounts.save(o, {safe: true}, function(e) {
-					if (e) callback(e);
-					else callback(null, o);
-				});
-			});
-		}
+
+		o.course1 		= newData.course1;
+		o.course2 	= newData.course2;
+		o.experience1 	= newData.experience1;
+		o.experience2 = newData.experience2;
+		o.interests1 = newData.interests1;
+		o.interests2 = newData.interests2;
+		o.firstLogin = newData.firstLogin;
+
+		accounts.save(o, {safe: true}, function(e) {
+			if (e) callback(e);
+			else callback(null, o);
+		});
 	});
 }
 

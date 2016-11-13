@@ -3,8 +3,10 @@ extends layout
 
 block content
 
-	#login.center-vertical
-		form.well(id='enterInfo', method='post')
+	#setup-info.center-vertical
+		div#info-background
+			polyline(points='0,0 100,100 100,0')
+		form.well(id='enterInfo', action='/setInfo', method='post')
 			h2 Hello!
 			h6 Please Enter Your Information
 
@@ -24,9 +26,9 @@ block content
 				h4.category-text Experience
 				span.category-desc List any relevant work experience.
 				.form-group
-					input.form-control(type='text', id='user-tf', name='user')
+					input.form-control(type='text', id='user-tf', name='experience1')
 				.form-group
-					input.form-control(type='password', id='pass-tf', name='pass')
+					input.form-control(type='password', id='pass-tf', name='experience2')
 
 			//Interests
 
@@ -46,8 +48,7 @@ block content
 
 			.controls#info-submit-button
 				button(type='submit').btn.btn-primary.button-sign-in
-					Finish
-			.clearfix
+					span Finish
 
 	include modals/alert
 	include modals/lost-password

@@ -175,3 +175,8 @@ h6 {
   height: 50px;
   display: none;
 }
+#setup-info {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,5 +1,7 @@
 $(document).ready(function(){
-	var ic = new InfoEnterController();
+	//var ic = new InfoEnterController();
+
+
 
 	$('#setup-info').ajaxForm({
 		beforeSubmit : function(formData, jqForm, options){

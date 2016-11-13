@@ -3,6 +3,25 @@ var CT = require('./modules/country-list');
 var AM = require('./modules/account-manager');
 var EM = require('./modules/email-dispatcher');
 
+var professors = [
+	{
+		name: 'Walker White',
+		major: 'Comp Sci',
+		spec: 'Game Design',
+		desc: 'I am a mathematical logician by training. My original work was in computable model theory. From this work I moved onto the design of high-level languages for databases and information systems.'
+	},{
+		name: 'John Mayes',
+		major: 'Math',
+		spec: 'Mathematical Biology',
+		desc: 'My research interests include general relativity, relativistic astrophysics, cosmology, and quantum fields in curved spacetime. Currently, one focus of my group\'s research is understanding various sources of.'
+	},{
+		name: 'Anthony Bella',
+		major: 'Physics',
+		spec: 'Molecular Biophysics',
+		desc: 'My lab studies emergent physical phenomena that arise from interactions between elementary constituents. The systes we study include suspensions of microscopic particles, the macromolecules in.'
+	}
+];
+
 module.exports = function(app) {
 
 // main login page //
@@ -112,6 +131,35 @@ module.exports = function(app) {
 		});
 	});
 
+	app.post('/setInfo', function(req, res){
+		if (req.session.user == null){
+			res.redirect('/');
+		}	else{
+			AM.updateAccount({
+				id		: req.session.user._id,
+				course1	: req.body['course1'],
+				experience1	: req.body['experience1'],
+				interests1	: req.body['interests1'],
+				course2	: req.body['course2'],
+				experience2: req.body['experience2'],
+				interests2	: req.body['interests2'],
+				firstLogin : 'false'
+			}, function(e, o){
+				if (e){
+					res.status(400).send('error-updating-account');
+				}	else{
+					req.session.user = o;
+			// update the user's login cookies if they exists //
+					if (req.cookies.user != undefined && req.cookies.pass != undefined){
+						res.cookie('user', o.user, { maxAge: 900000 });
+						res.cookie('pass', o.pass, { maxAge: 900000 });
+					}
+					res.status(200).send('ok');
+				}
+			});
+		}
+	});
+
 // User Settings //
 
 app.get('/settings', function(req, res) {
@@ -175,6 +223,19 @@ app.get('/settings', function(req, res) {
 				res.status(400).send('unable to update password');
 			}
 		})
+	});
+
+	app.get('/search', function(req, res) {
+		if (req.session.user == null){
+	// if user is not logged-in redirect back to login page //
+			res.redirect('/');
+		}else{
+			console.log(professors);
+			res.render('search', {
+				title: 'Proffy',
+				profs: professors
+			});
+		}
 	});
 
 // view & delete accounts //
